@@ -1,0 +1,336 @@
+body{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+:root{
+    --black: black;
+    --white: white;
+    --purple: purple;
+    --blue: rgb(1,0,85);
+    --cyan: cyan;
+    --orange: orange;
+    --grey: rgb(126, 126, 126);
+}
+
+.marg{
+    height: 240px;
+    width: 100%;
+    margin: 0;
+    background-image: url('data.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}  
+
+.box{
+    height: 150px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-writing{
+    height: 90%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-writing p{
+    font-size: 65px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    color: var(--white);
+}
+
+.container-button{
+    height: 20%;
+    width: 30%;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-acceuil{
+    height: auto;
+    width: auto;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    background: transparent;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background 0.3s linear;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-acceuil::before{
+    position: absolute;
+    content: '';
+    left: 0;
+    width: 0;
+    bottom: 0;
+    height: 100%;
+    z-index: -1;
+    background-color: var(--blue);
+    transition: all 0.1s linear;
+}
+
+.button-acceuil:hover::before{
+    animation: remplissage 0.1s linear forwards;
+}
+
+.button-acceuil:hover a{
+    color: var(--white);
+}
+
+.button-acceuil a{
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+@keyframes remplissage{
+    from{
+        left: 0;
+        width: 0;
+    }
+
+    to{
+        left: 0;
+        width: 100%;
+    }
+}
+
+.button-en-savoir-plus{
+    height: auto;
+    width: auto;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-en-savoir-plus::before{
+    position: absolute;
+    content: '';
+    left: 0;
+    width: 0;
+    bottom: 0;
+    height: 100%;
+    z-index: -1;
+    background-color: var(--blue);
+    transition: all 0.1s linear;
+}
+
+.button-en-savoir-plus:hover::before{
+    animation: remplissage 0.1s linear forwards;
+}
+
+
+.button-en-savoir-plus:hover a{
+    color: var(--white);
+}
+
+.button-en-savoir-plus a{
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.container-main{
+    height: 1700px;
+    width: 100%;
+    margin: 0;
+    background-color: rgb(1, 0, 85);
+    border: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-passion{
+    height: 8%;
+    width: 90%;
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-text-passion{
+    height: 50%;
+    width: 95%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.container-text-passion a{
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-decoration: underline;
+    color: var(--white);
+}
+
+.container-text-presentation{
+    height: 50%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container-text{
+    height: 10%;
+    width: 95%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-text a{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: var(--white);
+}
+
+.container-list{
+    height: 100%;
+    width: 95%;
+    margin-top: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container-text-list{
+    height: 15%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+}
+
+.container-text-list a{
+    font-size: 22px;
+    font-family: monospace;
+    font-weight: bold;
+    color: var(--white);
+}
+
+.container-button-point-faible{
+    height: 10%;
+    width: 30%;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-point-faible{
+    height: auto;
+    width: auto;
+    padding: 8px 15px;
+    margin-top: 10px;
+    background-color: var(--black);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.1s linear;
+}
+
+.button-point-faible:hover{
+    background-color: var(--white);
+}
+
+.button-point-faible:hover a{
+    color: var(--black);
+}
+
+.button-point-faible a{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.marg-bottom{
+    height: 20%;
+    width: 100%;
+    margin-top: 40px;
+    background-color: var(--black);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container-text-credit{
+    height: 20%;
+    width: 20%;
+    margin-left: 10%;
+    padding-bottom: 2%;
+    border-bottom: 2px solid rgb(126, 126, 126);
+    display: flex;
+    align-items: center;
+}
+
+.container-text-credit a{
+    font-size: 45px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: var(--white);
+}
+
+.container-text-email{
+    height: 15%;
+    width: 90%;
+    margin-left: 10%;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.container-text-email a{
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    color: rgba(255, 255, 255, 0.753);
+}
+
